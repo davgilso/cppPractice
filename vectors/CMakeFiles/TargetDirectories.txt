@@ -1,0 +1,3 @@
+/home/david/projects/cppPractice/vectors/CMakeFiles/edit_cache.dir
+/home/david/projects/cppPractice/vectors/CMakeFiles/rebuild_cache.dir
+/home/david/projects/cppPractice/vectors/CMakeFiles/davesVectors.dir

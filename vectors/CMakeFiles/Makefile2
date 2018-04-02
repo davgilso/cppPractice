@@ -54,10 +54,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/david/projects/projVectors
+CMAKE_SOURCE_DIR = /home/david/projects/cppPractice/vectors
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/david/projects/projVectors
+CMAKE_BINARY_DIR = /home/david/projects/cppPractice/vectors
 
 #=============================================================================
 # Target rules for target CMakeFiles/davesVectors.dir
@@ -66,7 +66,7 @@ CMAKE_BINARY_DIR = /home/david/projects/projVectors
 CMakeFiles/davesVectors.dir/all:
 	$(MAKE) -f CMakeFiles/davesVectors.dir/build.make CMakeFiles/davesVectors.dir/depend
 	$(MAKE) -f CMakeFiles/davesVectors.dir/build.make CMakeFiles/davesVectors.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/david/projects/projVectors/CMakeFiles --progress-num=1,2 "Built target davesVectors"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/david/projects/cppPractice/vectors/CMakeFiles --progress-num=1,2 "Built target davesVectors"
 .PHONY : CMakeFiles/davesVectors.dir/all
 
 # Include target in all.
@@ -76,9 +76,9 @@ all: CMakeFiles/davesVectors.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/davesVectors.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/david/projects/projVectors/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/david/projects/cppPractice/vectors/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/davesVectors.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/david/projects/projVectors/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/david/projects/cppPractice/vectors/CMakeFiles 0
 .PHONY : CMakeFiles/davesVectors.dir/rule
 
 # Convenience name for target.

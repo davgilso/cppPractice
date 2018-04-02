@@ -1,3 +1,0 @@
-/home/david/projects/projVectors/CMakeFiles/edit_cache.dir
-/home/david/projects/projVectors/CMakeFiles/rebuild_cache.dir
-/home/david/projects/projVectors/CMakeFiles/davesVectors.dir
