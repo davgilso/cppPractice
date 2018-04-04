@@ -1,1 +1,0 @@
-/usr/bin/c++    -Wall -Werror -std=c++11 -g   CMakeFiles/davesVectors.dir/src/main.cpp.o  -o davesVectors 
