@@ -5,7 +5,7 @@ using namespace std;
 
 int main (int argc, char **argv)
 {
-    int maxNumber =0, totalSum =0;
+    long long maxNumber =0, totalSum =0;
 
     cout << "Please enter a number to use: ";
     cin >> maxNumber;
