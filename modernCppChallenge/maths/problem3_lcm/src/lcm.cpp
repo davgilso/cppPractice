@@ -74,8 +74,6 @@ int calcLcm(int a, int b)
 {
     int gcd =0;
 
-    cout << "Accum vals = " << a << " b = " << b << "\n";
-    
     gcd = findGcd(a, b);
     cout << "GCD = " << gcd << "\n";
     if (gcd !=0)
