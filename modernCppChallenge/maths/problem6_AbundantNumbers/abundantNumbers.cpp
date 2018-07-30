@@ -2,7 +2,7 @@
 
 using namespace std;
 
-bool isAbundant(int input);
+bool isAbundant(int input, int *abundance);
 
 int main ()
 {
@@ -12,16 +12,17 @@ int main ()
 
     for (int i =1; i <=input; i++)
     {
-        if (isAbundant(i))
+        int j;
+        if (isAbundant(i, &j))
         {
-            cout << i << " is an abundant number. \n";
+            cout << "Abundant number = " << i << " Abundance = " << j << "\n";
         }
     }
 
     return 0;
 }
 
-bool isAbundant(int input)
+bool isAbundant(int input, int *abundance)
 {
     int total =0;
 
@@ -35,11 +36,12 @@ bool isAbundant(int input)
 
     if (total > input)
     {
+        *abundance = (total - input);
         return true;
     }
     else
     {
+        *abundance = 0;
         return false;
     }
-
 }
