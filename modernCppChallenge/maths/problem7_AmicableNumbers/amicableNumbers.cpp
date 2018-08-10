@@ -19,19 +19,28 @@ int main()
         int tmp1, tmp2 = 0;
 
         tmp1 = getRealNumberTotal(i, range);
-        tmp2 = getRealNumberTotal(tmp1, range);
 
-        if ((tmp1 >= range) || (tmp2 >= range))
+        if ((tmp1 >= range))
         {
             break;
         }
-        else if ((isAmicable(i, tmp2, &amicableList)) && (tmp1 != i))
+        else
         {
-            amicableList.push_back(tmp1);
-            amicableList.push_back(tmp2);
-            cout << tmp2 << "..." << tmp1 << "\n";
-        } 
-        else{}
+            tmp2 = getRealNumberTotal(tmp1, range);
+
+           //if (tmp2 >= range)
+            //{
+             //   cout << "Break 2" << tmp2 << "i = " << i << "\n";
+              //  break;
+            //}
+            if ((isAmicable(i, tmp2, &amicableList)) && (tmp1 != i))
+            {
+                amicableList.push_back(tmp1);
+                amicableList.push_back(tmp2);
+                cout << tmp2 << "..." << tmp1 << "\n";
+            }
+            else{} 
+        }
     }
 }
 
