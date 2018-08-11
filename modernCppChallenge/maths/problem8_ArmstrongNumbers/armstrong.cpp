@@ -5,7 +5,7 @@
 using namespace std;
 
 void print_each_digit(int x);
-int getArmstrong(int num;
+int getArmstrong(int num);
 
 std::vector<int>digits;
 
