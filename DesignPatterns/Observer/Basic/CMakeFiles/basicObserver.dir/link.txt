@@ -1,0 +1,1 @@
+/usr/bin/c++    -std=c++17   CMakeFiles/basicObserver.dir/peopleObserver.cpp.o  -o bin/basicObserver 

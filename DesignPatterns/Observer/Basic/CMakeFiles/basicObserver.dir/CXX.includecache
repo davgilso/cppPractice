@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/david/projcts/cppPractice/DesignPatterns/Observer/Basic/Observer.hpp
+string
+-
+
+/home/david/projcts/cppPractice/DesignPatterns/Observer/Basic/observable.hpp
+vector
+-
+string
+-
+
+/home/david/projcts/cppPractice/DesignPatterns/Observer/Basic/peopleObserver.cpp
+iostream
+-
+vector
+-
+observable.hpp
+/home/david/projcts/cppPractice/DesignPatterns/Observer/Basic/observable.hpp
+Observer.hpp
+/home/david/projcts/cppPractice/DesignPatterns/Observer/Basic/Observer.hpp
+

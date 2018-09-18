@@ -1,0 +1,3 @@
+/home/david/projcts/cppPractice/DesignPatterns/Observer/Basic/CMakeFiles/rebuild_cache.dir
+/home/david/projcts/cppPractice/DesignPatterns/Observer/Basic/CMakeFiles/basicObserver.dir
+/home/david/projcts/cppPractice/DesignPatterns/Observer/Basic/CMakeFiles/edit_cache.dir
