@@ -3,7 +3,6 @@
 
 using namespace std;
 
-//Quick comment to test branch.
 struct IRat //Observable
 {
     //NotifyEnterRat
