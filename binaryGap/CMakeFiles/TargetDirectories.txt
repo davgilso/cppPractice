@@ -1,0 +1,3 @@
+/Users/davgilso/cppProjects/cppPractice/binaryGap/CMakeFiles/rebuild_cache.dir
+/Users/davgilso/cppProjects/cppPractice/binaryGap/CMakeFiles/edit_cache.dir
+/Users/davgilso/cppProjects/cppPractice/binaryGap/CMakeFiles/binaryGap.dir
