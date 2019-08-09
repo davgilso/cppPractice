@@ -9,7 +9,93 @@ class fooDbusConnection{
 private:
 	//Value and pointer constant.
 	DBusConnection* connection;
-	const char *name = "dav.cpp.practice";
+	const char *name = "dav.cpp.practice.server";
+
+	void messageListener(void)
+	{
+		// loop, testing for new messages
+   		while (true) 
+		{
+	  		// non blocking read of the next available message
+      		dbus_connection_read_write(connection, 0);
+      		msg = dbus_connection_pop_message(connection);
+
+			// loop again if we haven't got a message
+      		if (NULL == msg) 
+			{ 
+         		sleep(1); 
+         		continue; 
+      		}
+
+      		// check this is a method call for the right interface and method
+    		if (dbus_message_is_method_call(msg, "dav.cpp.practice.server", "Method"))
+				reply_to_method_call(msg, connection);
+			{
+			}
+			
+			// free the message
+      		dbus_message_unref(msg);
+   		}
+	}
+
+	void reply_to_method_call(DBusMessage* msg, DBusConnection* conn)
+	{
+		DBusMessage* reply;
+		DBusMessageIter args;
+		DBusConnection* conn;
+		
+		bool stat = true;
+		
+		dbus_uint32_t level = 21614;
+		dbus_uint32_t serial = 0;
+		
+		char* param = "";
+
+		// read the arguments
+		if (!dbus_message_iter_init(msg, &args))
+		{
+			std::cout << "Message has no arguments!\n"; 
+		}
+		else if (DBUS_TYPE_STRING != dbus_message_iter_get_arg_type(&args)) 
+		{
+			fprintf(stderr, "Argument is not string!\n"); 
+		}
+		else
+		{ 
+			dbus_message_iter_get_basic(&args, &param);
+		}
+
+		printf("Method called with %s\n", param);
+
+		// create a reply from the message
+		reply = dbus_message_new_method_return(msg);
+
+		// add the arguments to the reply
+		dbus_message_iter_init_append(reply, &args);
+		if (!dbus_message_iter_append_basic(&args, DBUS_TYPE_BOOLEAN, &stat)) 
+		{ 
+			fprintf(stderr, "Out Of Memory!\n"); 
+			exit(1);
+		}
+		if (!dbus_message_iter_append_basic(&args, DBUS_TYPE_UINT32, &level)) 
+		{
+			fprintf(stderr, "Out Of Memory!\n"); 
+			exit(1);
+		}
+
+		// send the reply && flush the connection
+		if (!dbus_connection_send(conn, reply, &serial)) 
+		{ 
+			fprintf(stderr, "Out Of Memory!\n"); 
+			exit(1);
+		}
+		
+		dbus_connection_flush(conn);
+
+		// free the reply
+		dbus_message_unref(reply);
+	}
+
 	
 	int reserverDbusName()
 	{
@@ -75,6 +161,11 @@ public:
 		{
 			reserverDbusName();
 		}
+	}
+
+	~fooDbusConnection()
+	{
+		dbus_connection_close(connection);
 	}
 	
 	const DBusConnection* const getConnection()
